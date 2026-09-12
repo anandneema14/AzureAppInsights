@@ -1,3 +1,36 @@
 @WebApplication2_HostAddress = http://localhost:5234
+@ProductId = 000000000000000000000000
+
+GET {{WebApplication2_HostAddress}}/api/products
+Accept: application/json
+
+###
+
+GET {{WebApplication2_HostAddress}}/api/products/{{ProductId}}
+Accept: application/json
+
+###
+
+POST {{WebApplication2_HostAddress}}/api/products
+Content-Type: application/json
+
+{
+  "name": "Webcam",
+  "price": 59.99
+}
+
+###
+
+PUT {{WebApplication2_HostAddress}}/api/products/{{ProductId}}
+Content-Type: application/json
+
+{
+  "name": "Mechanical Keyboard",
+  "price": 129.99
+}
+
+###
+
+DELETE {{WebApplication2_HostAddress}}/api/products/{{ProductId}}
 
 ###
